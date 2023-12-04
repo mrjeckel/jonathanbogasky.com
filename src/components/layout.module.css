@@ -1,0 +1,22 @@
+.background {
+    font-family: sans-serif;
+    background-color: #fafeff;
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.container {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.heading {
+  color: rebeccapurple;
+}
