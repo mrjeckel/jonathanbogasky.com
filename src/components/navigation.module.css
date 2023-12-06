@@ -1,20 +1,20 @@
 .navigation {
   height: 8vh;
-  width: 100%;
   margin: auto;
-  background-color: #e2fcff;
   position: sticky;
   text-transform: uppercase;
-  border: 2px solid #aedbf0;
-  box-shadow: 0 2px 2px 2px grey;
+  font-family: Poppins, sans-serif;
 }
 
 .nav-box {
   display: flex;
   height: 100%;
+  width: 30%;
+  float: left;
   justify-content: flex-start;
   align-items: center;
   margin: 0 1vw;
+  border-bottom: 3px solid #111;
 }
 
 .nav-link {

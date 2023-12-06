@@ -6,7 +6,10 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat in egestas erat imperdiet sed.
+        Mauris pharetra et ultrices neque. Viverra vitae congue eu consequat. Id velit ut tortor pretium.
+      </p>
     </Layout>
   )
 }
