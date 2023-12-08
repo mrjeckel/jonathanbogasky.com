@@ -1,22 +1,38 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { navLink, activeNavLink, navigation, navBox } from './navigation.module.css'
 
-const NavLink = ({ to, children }) => {
-  return ( 
-    <Link to={to} className={navLink} activeClassName={activeNavLink}>{children}</Link>
-  )
+const NavLink = ({ to, image, children }) => {
+	return (
+		<Link to={to} className={navLink} activeClassName={activeNavLink}>{children}</Link>
+	)
 }
 
-const Navbar = () => {
-  return ( 
-    <div className={navigation}>
-      <div className={navBox}>
-       <NavLink to="/">Home</NavLink>
-       <NavLink to="/about">About</NavLink>
-     </div>
-   </div>
-  )
-}
+export default function Navbar() {
+  const data = useStaticQuery(graphql`
+	query {
+	  site {
+		siteMetadata {
+		  menuLinks {
+			name
+			link
+		  }
+		}
+	  }
+	}
+  `)
 
-export default Navbar
+	return ( 
+		<div className={navigation}>
+			<div className={navBox}>
+				{
+					data.site.siteMetadata.menuLinks.map(link => (
+						<NavLink to={link.link}>{link.name}</NavLink>
+					))
+				}
+				<a href='https://github.com/mrjeckel'>Github</a>
+			</div>
+		</div>
+	)
+}

@@ -5,19 +5,22 @@ import {
   container,
   heading,
 } from './layout.module.css'
+import CV from './cv'
 
 const Layout = ({ pageTitle, children }) => {
-  return (
+    console.log(<CV />)
+    return (
     <div className={background}>
-      <Navbar />
-      <main>
+        <Navbar />
+        <main>
         <div className={container}>
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
+            <h1 className={heading}>{pageTitle}</h1>
+            {children}
         </div>
-      </main>
+        <CV />
+        </main>
     </div>
-  )
+    )
 }
 
 export default Layout

@@ -1,12 +1,11 @@
 .background {
   font-family: 'Open Sans', sans-serif;
   width: 100vw;
-  margin: 0;
-  position: absolute;
+  height: 100vh;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
-  background-color: #f5f5f5;
+  position: absolute;
 }
 
 .container {

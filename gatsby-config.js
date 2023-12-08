@@ -4,7 +4,29 @@
 module.exports = {
   siteMetadata: {
     title: `jonathanbogasky.com`,
-    siteUrl: `https://www.yourdomain.tld`,
+    menuLinks: [
+      {
+         name: 'Home',
+         link: '/'
+      },
+      {
+         name: 'About',
+         link: '/about'
+      },
+      {
+        name: 'Projects',
+        link: '/projects'
+      }
+    ]
   },
-  plugins: ["gatsby-plugin-theme-ui"],
+  plugins: [
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `content`,
+          path: `${__dirname}/content`,
+        },
+    },
+    'gatsby-transformer-remark'
+  ],
 }
