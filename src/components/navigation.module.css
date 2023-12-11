@@ -28,6 +28,13 @@
   font-size: 20px;
 }
 
+.nav-link > img {
+  height: 16px;
+  width: 16px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+}
+
 .active-nav-link {
   font-style: bold;
   color: #111;

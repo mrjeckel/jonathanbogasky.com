@@ -16,6 +16,11 @@ module.exports = {
       {
         name: 'Projects',
         link: '/projects'
+      },
+      {
+        name: 'Github',
+        link: 'https://github.com/mrjeckel',
+        external: true
       }
     ]
   },
@@ -27,6 +32,7 @@ module.exports = {
           path: `${__dirname}/content`,
         },
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-plugin-image'
   ],
 }
