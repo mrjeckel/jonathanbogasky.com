@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from 'gatsby';
 import { navLink, activeNavLink, navigation, navBox } from './navigation.module.css'
-import link from '../images/link.png'
+import linkIcon from '../images/link_icon.png'
 
-const NavLink = ({ to, children }) => {
+function NavLink({ to, children }) {
 	return (
 		<Link to={to} className={navLink} activeClassName={activeNavLink}>{children}</Link>
 	)
 }
 
-const ExternalNavLink = ({ to, image, children }) => {
+function ExternalNavLink({ to, image, children }) {
 	return (
-        <a href={to} className={navLink}>
+        <a href={to} className={navLink} target='_blank' rel='noreferrer noopener'>
 			{children}
 			<img src={image} alt='link' />
 		</a>
@@ -20,18 +20,19 @@ const ExternalNavLink = ({ to, image, children }) => {
 }
 
 export default function Navbar() {
-  const data = useStaticQuery(graphql`
-	query {
-	  site {
-		siteMetadata {
-		  menuLinks {
-			name
-			link
-		  }
+	const data = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata {
+					menuLinks {
+						name
+						link
+						external
+					}
+				}
+			}
 		}
-	  }
-	}
-  `)
+	`)
 
 	return ( 
 		<div className={navigation}>
@@ -39,14 +40,13 @@ export default function Navbar() {
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
-							return <ExternalNavLink to='https://github.com/mrjeckel' image={link}>Github</ExternalNavLink>
+							return <ExternalNavLink to={link.link} image={linkIcon}>{link.name}</ExternalNavLink>
 						} 
 						else {
 							return <NavLink to={link.link}>{link.name}</NavLink>
 						}
 					})
 				}
-				
 			</div>
 		</div>
 	)

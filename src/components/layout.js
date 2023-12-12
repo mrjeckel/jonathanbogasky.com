@@ -17,7 +17,7 @@ const Layout = ({ pageTitle, children }) => {
             <h1 className={heading}>{pageTitle}</h1>
             {children}
         </div>
-        <CV />
+        // <CV />
         </main>
     </div>
     )
