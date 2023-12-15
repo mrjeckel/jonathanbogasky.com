@@ -5,21 +5,15 @@ import {
   container,
   heading,
 } from './layout.module.css'
-import CV from './cv'
 
 const Layout = ({ pageTitle, children }) => {
-    console.log(<CV />)
     return (
-    <div className={background}>
-        <Navbar />
-        <main>
-        <div className={container}>
-            <h1 className={heading}>{pageTitle}</h1>
-            {children}
+        <div className={background}>
+            <Navbar />
+            <main className={container}>
+                    {children}
+            </main>
         </div>
-        // <CV />
-        </main>
-    </div>
     )
 }
 

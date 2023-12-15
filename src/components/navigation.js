@@ -35,7 +35,7 @@ export default function Navbar() {
 	`)
 
 	return ( 
-		<div className={navigation}>
+		<nav className={navigation}>
 			<div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
@@ -48,6 +48,6 @@ export default function Navbar() {
 					})
 				}
 			</div>
-		</div>
+		</nav>
 	)
 }
