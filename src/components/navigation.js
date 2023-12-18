@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from 'gatsby';
-import { navLink, activeNavLink, navigation, navBox } from './navigation.module.css'
-import linkIcon from '../images/link_icon.png'
+import { navLink, activeNavLink, navigation, navBox, linkIcon, logo } from './navigation.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 function NavLink({ to, children }) {
 	return (
@@ -10,11 +11,11 @@ function NavLink({ to, children }) {
 	)
 }
 
-function ExternalNavLink({ to, image, children }) {
+function ExternalNavLink({ to, children }) {
 	return (
         <a href={to} className={navLink} target='_blank' rel='noreferrer noopener'>
 			{children}
-			<img src={image} alt='link' />
+			<FontAwesomeIcon className={linkIcon} icon={faUpRightFromSquare} />
 		</a>
     )
 }
@@ -36,11 +37,12 @@ export default function Navbar() {
 
 	return ( 
 		<nav className={navigation}>
+			<div className={logo}>jonathanbogasky.is</div>
 			<div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
-							return <ExternalNavLink to={link.link} image={linkIcon}>{link.name}</ExternalNavLink>
+							return <ExternalNavLink to={link.link}>{link.name}</ExternalNavLink>
 						} 
 						else {
 							return <NavLink to={link.link}>{link.name}</NavLink>

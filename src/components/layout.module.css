@@ -1,7 +1,9 @@
+* {
+  color: #2f4858
+}
+
 .background {
   font-family: 'Open Sans', sans-serif;
-  width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -17,6 +19,20 @@
   border-radius: 10px;
 }
 
-.heading {
-  color: #111;
+.container > div {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.container > :nth-child(2n-0) {
+  background-color: #52d2fe;
+  color: #fff;
+  padding-right: 20%;
+  justify-content: right;
+}
+
+.container > :nth-child(2n-1) {
+  background-color: #fff;
+  padding-left: 20%;
+  justify-content: left;
 }

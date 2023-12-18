@@ -3,10 +3,9 @@ import Navbar from './navigation'
 import {
   background,
   container,
-  heading,
 } from './layout.module.css'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
     return (
         <div className={background}>
             <Navbar />

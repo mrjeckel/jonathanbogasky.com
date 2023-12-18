@@ -1,25 +1,31 @@
 .navigation {
-  height: 8vh;
+  height: 7vh;
   margin: auto;
   position: sticky;
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  float: left;
+  color: #52d2fe;
+  margin-left: 2.5%;
+  font-size: 18px;
 }
 
 .nav-box {
   display: flex;
   height: 100%;
-  width: 30%;
-  float: left;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 1vw;
-  border-bottom: 3px solid #111;
+  margin-right: 5%;
+  margin-left: auto;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #111;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -28,20 +34,19 @@
   font-size: 20px;
 }
 
-.nav-link > img {
-  height: 16px;
-  width: 16px;
+.nav-link > .link-icon {
+  font-size: 12px;
   margin-left: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .active-nav-link {
   font-style: bold;
-  color: #111;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
   font-size: 20px;
+  text-decoration: underline;
 }
