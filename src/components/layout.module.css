@@ -1,5 +1,6 @@
 * {
-  color: #2f4858
+  color: #2f4858;
+  background-color: #f9f2db;
 }
 
 .background {
@@ -32,7 +33,6 @@
 }
 
 .container > :nth-child(2n-1) {
-  background-color: #fff;
   padding-left: 20%;
   justify-content: left;
 }

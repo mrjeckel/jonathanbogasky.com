@@ -42,10 +42,10 @@ export default function Navbar() {
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
-							return <ExternalNavLink to={link.link}>{link.name}</ExternalNavLink>
+							return <ExternalNavLink key={link.name} to={link.link}>{link.name}</ExternalNavLink>
 						} 
 						else {
-							return <NavLink to={link.link}>{link.name}</NavLink>
+							return <NavLink key={link.name} to={link.link}>{link.name}</NavLink>
 						}
 					})
 				}

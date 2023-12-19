@@ -6,12 +6,12 @@ module.exports = {
     title: `jonathanbogasky.com`,
     menuLinks: [
       {
-         name: 'Home',
-         link: '/'
+        name: 'Home',
+        link: '/'
       },
       {
-         name: 'About',
-         link: '/alwayslearning'
+        name: 'About',
+        link: '/alwayslearning'
       },
       {
         name: 'Projects',
