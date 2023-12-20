@@ -2,9 +2,6 @@
     display: grid;
     place-content: center;
     gap: 5px;
-    grid-template:
-        'postgresql postgresql mongodb python'
-        'gitlab react linux docker';
 }
 
 .cloud-box > p {
@@ -23,7 +20,7 @@
 }
 
 .cloud-box :nth-child(3n) {
-    writing-mode: vertical-lr;
+    writing-mode: 'vertical-lr';
     color: #0090c1;
 }
 
