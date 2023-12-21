@@ -23,24 +23,27 @@ const AboutPage = () => {
     }
   `)
 
+  let skills = data.allAboutJson.nodes.find(obj => obj.tag === 'skills');
+  let jobs = data.allAboutJson.nodes.find(obj => obj.tag === 'jobs');
+
   return (
     <Layout pageTitle="About Me">
       <div><h2>About Me</h2></div>
       <div>
-        <h2>Things I Know</h2>
+        <h2>{skills.title}</h2>
         <WordCloud>
           {
-            data.allAboutJson.nodes.find(obj => obj.tag === 'skills').content.map(skill => {
+            skills.content.map(skill => {
               return <p rank={skill.rank}>{skill.name}</p>;
             })
           }
         </WordCloud>
       </div>
       <div>
-        <h2>Places I've Worked</h2>
+        <h2>{jobs.title}</h2>
         <ul>
           {
-            data.allAboutJson.nodes.find(obj => obj.tag === 'jobs').content.map(job => {
+            jobs.content.map(job => {
               return (
                 <li key={job.name.replace(/\s/g, '')}>
                   <ul>
