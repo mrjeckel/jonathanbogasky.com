@@ -1,0 +1,26 @@
+{
+    "title": "Places I've Worked",
+    "tag": "jobs",
+    "content": [
+        {
+            "name": "SRAM LLC",
+            "date": "JUL 2021 - Present",
+            "title": "Software Engineer"
+        },
+        {
+            "name": "ITW Dynatec",
+            "date": "JUN 2018 - JUL 2021",
+            "title": "Electronics & Controls Engineer"
+        },
+        {
+            "name": "Shiroki North America",
+            "date": "MAY 2017 - JUN 2018",
+            "title": "Manufacturing Controls Engineer"
+        },
+        {
+            "name": "Hennessy Industries",
+            "date": "DEC 2014 - MAY 2017",
+            "title": "Engineer Intern"
+        }
+    ]
+}

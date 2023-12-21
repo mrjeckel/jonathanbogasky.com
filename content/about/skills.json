@@ -1,0 +1,58 @@
+{   
+    "title": "Things I Know",
+    "tag": "skills",
+    "content": [
+        {
+            "name": "Python",
+            "rank": 1
+        },
+        {
+            "name": "Linux",
+            "rank": 1
+        },
+        {
+            "name": "PostgreSQL",
+            "rank": 2
+        },
+        {
+            "name": "Docker",
+            "rank": 2
+        },
+        {
+            "name": "Gitlab",
+            "rank": 3
+        },
+        {
+            "name": "Ansible",
+            "rank": 4
+        },
+        {
+            "name": "MongoDB",
+            "rank": 4
+        },
+        {
+            "name": "Flask",
+            "rank": 4
+        },
+        {
+            "name": "Django",
+            "rank": 5
+        },
+        {
+            "name": "C",
+            "rank": 5
+        },
+        {
+            "name": "Javascript",
+            "rank": 6
+        },
+        {
+            "name": "React",
+            "rank": 6
+        },
+        {
+            "name": "AWS",
+            "rank": 6
+        }
+    ]
+}
