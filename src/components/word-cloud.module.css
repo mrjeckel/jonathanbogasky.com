@@ -2,7 +2,7 @@
     display: grid;
     place-content: center;
     gap: 5px;
-    grid-auto-flow: column;
+    grid-auto-flow: column dense;
 }
 
 .cloud-box > div {

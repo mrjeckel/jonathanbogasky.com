@@ -14,19 +14,19 @@ function Word({ fontSize, writingMode, children }) {
     }
 
     return (
-      <div style={{ fontSize: `${fontSize}em`, writingMode: writingMode, gridRowEnd: gridRowEnd, gridColumnEnd: gridColumnEnd }}>
+      <div style={{ fontSize: `${fontSize*0.75}em`, writingMode: writingMode, gridRowEnd: gridRowEnd, gridColumnEnd: gridColumnEnd }}>
         {children}
       </div>
     );
 }
 
 export default function WordCloud({ children }) {
-  let shuffledChildren = seededShuffle(Children.toArray(children), 2448314);
+  let shuffledChildren = seededShuffle(Children.toArray(children), 10);
   let maxEmphasis = Math.max(...shuffledChildren.map(child => child.props.rank));
   
   let cloudWords = shuffledChildren.map((child, index) => {
     let fontSize = (maxEmphasis - child.props.rank) + 1;
-    let writingMode = ((index + 1) % 2 == 0) ? 'vertical-lr' : 'horizontal-tb';
+    let writingMode = ((index + 1) % 3 == 0) ? 'vertical-lr' : 'horizontal-tb';
     return <Word key={child.props.children.toLowerCase()} fontSize={fontSize} writingMode={writingMode}>{child}</Word>;
   });
 

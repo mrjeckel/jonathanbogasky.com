@@ -1,36 +1,61 @@
 // Step 1: Import React
 import * as React from 'react'
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout'
 import WordCloud from '../components/word-cloud'
 
 // Step 2: Define your component
 const AboutPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allAboutJson {
+        nodes {
+          title
+          tag
+          content {
+            name
+            rank
+            date
+            title
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout pageTitle="About Me">
       <div><h2>About Me</h2></div>
       <div>
         <h2>Things I Know</h2>
         <WordCloud>
-          <p rank={1}>Python</p>
-          <p rank={1}>PostgreSQL</p>
-          <p rank={1}>Linux</p>
-          <p rank={2}>Docker</p>
-          <p rank={2}>Gitlab</p>
-          <p rank={3}>MongoDB</p>
-          <p rank={4}>React</p>
+          {
+            data.allAboutJson.nodes.find(obj => obj.tag === 'skills').content.map(skill => {
+              return <p rank={skill.rank}>{skill.name}</p>;
+            })
+          }
         </WordCloud>
       </div>
       <div>
-        <h2>My Employment Chronicles</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h2>Places I've Worked</h2>
+        <ul>
+          {
+            data.allAboutJson.nodes.find(obj => obj.tag === 'jobs').content.map(job => {
+              return (
+                <li key={job.name.replace(/\s/g, '')}>
+                  <ul>
+                    <li><h3>{job.name}</h3></li>
+                    <li>{job.date}</li>
+                    <li>{job.title}</li>
+                  </ul>
+                </li>
+              );
+            })
+          }
+          </ul>
       </div>
       <div>
-        <h2>Places I've Learned</h2>
+        <h2>Where I Learned Stuff</h2>
       </div>
     </Layout>
   )
