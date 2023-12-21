@@ -7,17 +7,31 @@ import WordCloud from '../components/word-cloud'
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
-      <div><h3>About Me!</h3></div>
-      <WordCloud>
-        <text rank={1}>Python</text>
-        <text rank={1}>PostgreSQL</text>
-        <text rank={1}>Linux</text>
-        <text rank={2}>Docker</text>
-        <text rank={2}>Gitlab</text>
-        <text rank={3}>MongoDB</text>
-        <text rank={3}>React</text>
-      </WordCloud>
-      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div><h2>About Me</h2></div>
+      <div>
+        <h2>Things I Know</h2>
+        <WordCloud>
+          <p rank={1}>Python</p>
+          <p rank={1}>PostgreSQL</p>
+          <p rank={1}>Linux</p>
+          <p rank={2}>Docker</p>
+          <p rank={2}>Gitlab</p>
+          <p rank={3}>MongoDB</p>
+          <p rank={4}>React</p>
+        </WordCloud>
+      </div>
+      <div>
+        <h2>My Employment Chronicles</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div>
+        <h2>Places I've Learned</h2>
+      </div>
     </Layout>
   )
 }

@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         name: 'Projects',
-        link: '/tryingtofindfreetime'
+        link: '/tryingtofindtime'
       },
       {
         name: 'Github',

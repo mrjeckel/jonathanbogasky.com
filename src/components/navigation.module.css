@@ -1,11 +1,17 @@
 .navigation {
   height: 7vh;
-  margin: auto;
-  position: sticky;
+  width: 100%;
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
   display: flex;
   align-items: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: purple;
 }
 
 .logo {
