@@ -15,11 +15,11 @@ const AboutPage = () => {
           tag
           content {
             name
+            title
             degree
             url
             rank
             date
-            title
             url
           }
         }

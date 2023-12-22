@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { card } from './horizontal-card.module.css'
 import headshot from '../images/headshot.jpg'
 

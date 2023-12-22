@@ -34,9 +34,13 @@
 
 .container > :nth-child(2n-0) {
   background-color: #52d2fe;
-  color: #fff;
+  color: #f9f2db;
   padding-right: 12.5%;
   text-align: right;
+}
+
+.container > :nth-child(2n-0) a:hover {
+  color: #f9f2db;
 }
 
 .container > :nth-child(2n-0) * {
@@ -48,32 +52,11 @@
   text-align: left;
 }
 
-.container > :nth-child(2n-1) * {
-  background-color: inherit;
-  justify-content: start;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul > li > h3 {
-  margin-bottom: 0;
-}
-
-ul > li > h3 > a {
-  text-decoration: none;
-}
-
-ul > li > h3 > a:hover {
+.container > :nth-child(2n-1) a:hover {
   color: #52d2fe;
 }
 
-ul > li > ul {
-  transition: transform 0.3s ease;
-}
-
-ul > li > ul:hover {
-  transform: translateX(5px);
+.container > :nth-child(2n-1) * {
+  background-color: inherit;
+  justify-content: start;
 }
