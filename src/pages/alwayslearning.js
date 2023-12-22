@@ -3,6 +3,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout'
 import WordCloud from '../components/word-cloud'
+import FancyList from '../components/fancy-list';
 
 // Step 2: Define your component
 const AboutPage = () => {
@@ -14,9 +15,12 @@ const AboutPage = () => {
           tag
           content {
             name
+            degree
+            url
             rank
             date
             title
+            url
           }
         }
       }
@@ -25,6 +29,7 @@ const AboutPage = () => {
 
   let skills = data.allAboutJson.nodes.find(obj => obj.tag === 'skills');
   let jobs = data.allAboutJson.nodes.find(obj => obj.tag === 'jobs');
+  let education = data.allAboutJson.nodes.find(obj => obj.tag === 'education');
 
   return (
     <Layout pageTitle="About Me">
@@ -39,27 +44,8 @@ const AboutPage = () => {
           }
         </WordCloud>
       </div>
-      <div>
-        <h2>{jobs.title}</h2>
-        <ul>
-          {
-            jobs.content.map(job => {
-              return (
-                <li key={job.name.replace(/\s/g, '')}>
-                  <ul>
-                    <li><h3>{job.name}</h3></li>
-                    <li>{job.date}</li>
-                    <li>{job.title}</li>
-                  </ul>
-                </li>
-              );
-            })
-          }
-          </ul>
-      </div>
-      <div>
-        <h2>Where I Learned Stuff</h2>
-      </div>
+      <FancyList jsonData={jobs} />
+      <FancyList jsonData={education} />
     </Layout>
   )
 }
