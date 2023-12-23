@@ -7,13 +7,6 @@
   align-items: center;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: purple;
-}
-
 .logo {
   float: left;
   color: #52d2fe;

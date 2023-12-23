@@ -18,6 +18,7 @@
 
 .cloud-box > div:hover {
     transform: translateY(-5px);
+    color: #f9f2db;
 }
 
 .cloud-box > :nth-child(2n) {

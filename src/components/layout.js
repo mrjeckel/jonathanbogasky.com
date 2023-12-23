@@ -1,5 +1,6 @@
 import React, { Children } from 'react'
 import Navbar from './navigation'
+import Footer from './footer'
 import {
   background,
   container,
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
             <main className={container}>
                     {wrappedChildren}
             </main>
+            <Footer />
         </div>
     );
 }

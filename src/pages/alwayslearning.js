@@ -39,7 +39,7 @@ const AboutPage = () => {
         <WordCloud>
           {
             skills.content.map(skill => {
-              return <p rank={skill.rank}>{skill.name}</p>;
+              return <p key={skill.name} rank={skill.rank}>{skill.name}</p>;
             })
           }
         </WordCloud>
