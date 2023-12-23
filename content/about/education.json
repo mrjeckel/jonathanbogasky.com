@@ -1,0 +1,18 @@
+{
+    "title": "Where I Learned Stuff",
+    "tag": "education",
+    "content": [
+        {
+            "name": "Georgia Institute of Technology",
+            "degree": "Master of Science - Computer Science",
+            "date": "January 2022 - Current",
+            "url": "https://omscs.gatech.edu/"
+        },
+        {
+            "name": "Middle Tennessee State University",
+            "degree": "Bachelor of Science - Mechatronics Engineering",
+            "date": "January 2013 - May 2017",
+            "url": "https://www.mtsu.edu/provost/accreditation/mechatronics_bs..php"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+.footer {
+    margin-top: auto;
+    padding: 0 5%;
+    justify-content: space-between;
+    height: 2.5em;
+    display: flex;
+    color: #f9f2db;
+    box-sizing: border-box;
+    background-color: #2f4858;
+    align-items: center;
+}
+
+.footer span {
+    color: inherit;
+    background-color: inherit;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.icon-box {
+    color: inherit;
+    background-color: inherit;
+}
+
+.icon-box a {
+    margin: 0 5px;
+    background-color: inherit;
+} 
+
+.link-icon {
+  font-size: 18px;
+  background-color: #2f4858;
+}
+
+.link-icon * {
+    color: #f9f2db;
+}
+
+.text-box {
+    color: inherit;
+    background-color: inherit;
+}
+
+.copyright-box {
+    background-color: inherit;
+}
