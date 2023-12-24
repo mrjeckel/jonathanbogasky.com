@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `jonathanbogasky.com`,
+    title: 'jonathanbogasky.info',
     menuLinks: [
       {
         name: 'Home',

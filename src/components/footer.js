@@ -16,7 +16,7 @@ export default function Footer() {
                 </a>
             </div>
             <div className={textBox}>
-                <span>jonathanbogasky@gmail.com</span>
+                <span>Contact Me</span>
             </div>
             <div className={copyrightBox}>
                 <FontAwesomeIcon className={linkIcon} icon={faCopyright} />

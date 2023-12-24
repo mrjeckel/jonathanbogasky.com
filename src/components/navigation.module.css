@@ -12,6 +12,7 @@
   color: #52d2fe;
   margin-left: 2.5%;
   font-size: 18px;
+  font-weight: bolder;
 }
 
 .nav-box {
@@ -24,6 +25,7 @@
 }
 
 .nav-link {
+  font-weight: bolder;
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -40,7 +42,6 @@
 }
 
 .active-nav-link {
-  font-style: bold;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;

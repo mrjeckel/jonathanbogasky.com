@@ -25,6 +25,7 @@ export default function Navbar() {
 		query {
 			site {
 				siteMetadata {
+					title
 					menuLinks {
 						name
 						link
@@ -37,7 +38,7 @@ export default function Navbar() {
 
 	return ( 
 		<nav className={navigation}>
-			<div className={logo}>jonathanbogasky.is</div>
+			<div className={logo}>{data.site.siteMetadata.title}</div>
 			<div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {

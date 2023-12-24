@@ -1,11 +1,9 @@
 .footer {
     margin-top: auto;
     padding: 0 5%;
-    justify-content: space-between;
     height: 2.5em;
     display: flex;
     color: #f9f2db;
-    box-sizing: border-box;
     background-color: #2f4858;
     align-items: center;
 }
@@ -39,8 +37,16 @@
 .text-box {
     color: inherit;
     background-color: inherit;
+    margin-left: auto;
+    margin-right: 2.5%;
 }
 
 .copyright-box {
+    color: inherit;
     background-color: inherit;
+}
+
+.copyright-box .link-icon {
+    font-size: 12px;
+    margin-right: 5px;
 }
