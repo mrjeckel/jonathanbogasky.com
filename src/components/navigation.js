@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { useStaticQuery, graphql } from 'gatsby';
-import { navLink, activeNavLink, navigation, navBox, linkIcon, logo } from './navigation.module.css'
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { navLink, activeNavLink, navigation, navBox, linkIcon, logo } from './navigation.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 

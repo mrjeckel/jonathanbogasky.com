@@ -1,10 +1,31 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import WordCloud from '../components/word-cloud'
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import ProjectGrid from '../components/project-grid'
 
 const AboutPage = () => {
+    const data = useStaticQuery(graphql`
+      query {
+        allProjectsJson {
+          nodes {
+            title
+            tag
+            content {
+              name
+              description
+              url
+              status
+            }
+          }
+        }
+      }
+  `)
+
+  let personalProjects = data.allProjectsJson.nodes.find(obj => obj.tag === 'personal');
+
   return (
-    <Layout pageTitle="About Me">
+    <Layout wrapChildren={false}>
+      <ProjectGrid jsonData={personalProjects} />
     </Layout>
   )
 }

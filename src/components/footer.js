@@ -1,8 +1,8 @@
-import React from 'react'
-import { footer, iconBox, linkIcon, textBox, copyrightBox } from './footer.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import React from 'react';
+import { footer, iconBox, linkIcon, textBox, copyrightBox } from './footer.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
 export default function Footer() {
     return (

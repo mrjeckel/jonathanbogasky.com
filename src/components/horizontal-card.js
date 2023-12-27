@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { card } from './horizontal-card.module.css'
-import headshot from '../images/headshot.jpg'
+import * as React from 'react';
+import { card } from './horizontal-card.module.css';
+import headshot from '../images/headshot.jpg';
 
 export default function Intro() {
     return (

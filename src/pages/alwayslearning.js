@@ -1,8 +1,7 @@
-// Step 1: Import React
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby';
-import Layout from '../components/layout'
-import WordCloud from '../components/word-cloud'
+import Layout from '../components/layout';
+import WordCloud from '../components/word-cloud';
 import FancyList from '../components/fancy-list';
 
 // Step 2: Define your component
@@ -32,7 +31,7 @@ const AboutPage = () => {
   let education = data.allAboutJson.nodes.find(obj => obj.tag === 'education');
 
   return (
-    <Layout pageTitle="About Me">
+    <Layout wrapChildren={true}>
       <div><h2>About Me</h2></div>
       <div>
         <h2>{skills.title}</h2>

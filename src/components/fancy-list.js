@@ -1,5 +1,5 @@
 import React from 'react';
-import { listBox, interactiveList } from './fancy-list.module.css'
+import { listBox, interactiveList } from './fancy-list.module.css';
 
 export function ChildList({ data }) {
       let listItems = Object.entries(data).map(([key, value]) => {

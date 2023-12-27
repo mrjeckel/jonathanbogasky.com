@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
-import { cloudBox } from './word-cloud.module.css'
-import seededShuffle from '../util/seeded-shuffle.js'
+import { cloudBox } from './word-cloud.module.css';
+import seededShuffle from '../util/seeded-shuffle.js';
 
 function Word({ fontSize, writingMode, children }) {
     let gridRowEnd = 'span 1';
