@@ -1,0 +1,23 @@
+{
+    "title": "Personal Projects",
+    "tag": "personal",
+    "content": [
+        {
+            "name": "PyMUD",
+            "description": "A framework for building a type of text-based game known as a multi-user dungeon. Leverages multithreading for handling client connections and server events. Built with Python; uses Docker and PostgreSQL in development.",
+            "url": "https://github.com/mrjeckel/PyMUD",
+            "status": "In Progress"
+        },
+        {
+            "name": "Powerball",
+            "description": "CLI application that crunches Powerball draws to determine the most likely next draw. This works by calculating the probabilities for an assumedly random distribution; it returns the numbers with the highest associated probabilities.",
+            "url": "https://github.com/mrjeckel/Powerball",
+            "status": "In Progress"
+        },
+        {
+            "name": "test",
+            "description": "test",
+            "status": "Test"
+        }
+    ]
+}

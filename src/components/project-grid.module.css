@@ -1,0 +1,47 @@
+.grid-box {
+    display: grid;
+    gap: 50px;
+    grid-auto-rows: 225px;
+    grid-template-columns: repeat(auto-fill, 325px);
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+
+.grid-item {
+    align-items: center;
+    background-color: #2f4858;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 5px;
+    transition: 0.3s ease;
+    color: #f9f2db;
+    border: 1px solid black;
+    position: relative;
+}
+
+.grid-item:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 12px 12px 30px 1px #52d2fe;
+    color: #52d2fe;
+}
+
+.grid-item p {
+    font-size: 0.9em;
+    margin-right: auto;
+}
+
+.grid-item a, .grid-item h3 {
+    text-decoration: none;
+    margin: 0;
+}
+
+.grid-item h5 {
+    margin: 10px;
+}
+
+.grid-item * {
+    color: inherit;
+    background-color: inherit;
+}
