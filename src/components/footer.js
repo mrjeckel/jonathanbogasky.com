@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { footer, iconBox, linkIcon, textBox, copyrightBox } from './footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +17,7 @@ export default function Footer() {
                 </a>
             </div>
             <div className={textBox}>
-                <span>Contact Me</span>
+                <Link to='/letschat' state={{ modal: true }}>Contact Me</Link>
             </div>
             <div className={copyrightBox}>
                 <FontAwesomeIcon className={linkIcon} icon={faCopyright} />

@@ -13,11 +13,6 @@
             "description": "CLI application that crunches Powerball draws to determine the most likely next draw. This works by calculating the probabilities for an assumedly random distribution; it returns the numbers with the highest associated probabilities.",
             "url": "https://github.com/mrjeckel/Powerball",
             "status": "In Progress"
-        },
-        {
-            "name": "test",
-            "description": "test",
-            "status": "Test"
         }
     ]
 }

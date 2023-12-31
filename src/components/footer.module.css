@@ -8,11 +8,13 @@
     align-items: center;
 }
 
-.footer span {
+.footer span,
+.footer a {
     color: inherit;
     background-color: inherit;
     font-weight: bold;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .icon-box {
