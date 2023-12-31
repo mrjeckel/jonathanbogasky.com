@@ -39,8 +39,16 @@
   background-color: inherit;
 }
 
+.container > :nth-child(2n-0) a:hover {
+  color: #f9f2db;
+}
+
 .container > .section:nth-child(2n-1) * {
   background-color: inherit;
+}
+
+.container > .section:nth-child(2n-1) a:hover {
+  color: #52d2fe;
 }
 
 @media (width <= 700px) {
@@ -74,16 +82,8 @@
     max-width: 60%;
   }
 
-  .container > :nth-child(2n-0) a:hover {
-    color: #f9f2db;
-  }
-
   .container > .section:nth-child(2n-0) > div > ul > li:hover {
     transform: translateX(-10px);
-  }
-
-  .container > .section:nth-child(2n-1) a:hover {
-    color: #52d2fe;
   }
 
   .container > .section:nth-child(2n-1) > div > ul > li:hover {

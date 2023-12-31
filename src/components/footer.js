@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { footer, iconBox, linkIcon, textBox, copyrightBox } from './footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
-export default function Footer() {
+export default function Footer({ modalOpen }) {
     return (
         <div className={footer}>
             <div className={iconBox}>
@@ -17,7 +16,7 @@ export default function Footer() {
                 </a>
             </div>
             <div className={textBox}>
-                <Link to='/letschat' state={{ modal: true }}>Contact Me</Link>
+                <span style={{ cursor: "pointer" }} onClick={modalOpen}>Contact Me</span>
             </div>
             <div className={copyrightBox}>
                 <FontAwesomeIcon className={linkIcon} icon={faCopyright} />

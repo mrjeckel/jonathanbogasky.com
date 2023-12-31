@@ -36,7 +36,6 @@ module.exports = {
           path: `${__dirname}/content`,
         },
     },
-    'gatsby-transformer-json',
-    `gatsby-plugin-modal-routing`
+    'gatsby-transformer-json'
   ],
 }
