@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
-import ProjectGrid from '../components/project-grid'
+import ProjectGrid from '../components/project-grid';
 
-const AboutPage = () => {
+export default function ProjectsPage() {
     const data = useStaticQuery(graphql`
       query {
         allProjectsJson {
@@ -19,7 +19,7 @@ const AboutPage = () => {
           }
         }
       }
-  `)
+  `);
 
   let personalProjects = data.allProjectsJson.nodes.find(obj => obj.tag === 'personal');
 
@@ -27,9 +27,5 @@ const AboutPage = () => {
     <Layout wrapChildren={false}>
       <ProjectGrid jsonData={personalProjects} />
     </Layout>
-  )
+  );
 }
-
-export const Head = () => <title>Projects</title>
-
-export default AboutPage

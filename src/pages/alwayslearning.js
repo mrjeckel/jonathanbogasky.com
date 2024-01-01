@@ -1,12 +1,11 @@
-import * as React from 'react'
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import WordCloud from '../components/word-cloud';
 import FancyList from '../components/fancy-list';
 import headshot from '../images/headshot.jpg'
 
-// Step 2: Define your component
-const AboutPage = () => {
+export default function AboutPage() {
   const data = useStaticQuery(graphql`
     query {
       allAboutJson {
@@ -25,7 +24,7 @@ const AboutPage = () => {
         }
       }
     }
-  `)
+  `);
 
   let skills = data.allAboutJson.nodes.find(obj => obj.tag === 'skills');
   let jobs = data.allAboutJson.nodes.find(obj => obj.tag === 'jobs');
@@ -58,10 +57,5 @@ const AboutPage = () => {
       <FancyList jsonData={jobs} />
       <FancyList jsonData={education} />
     </Layout>
-  )
+  );
 }
-
-export const Head = () => <title>About Me</title>
-
-// Step 3: Export your component
-export default AboutPage

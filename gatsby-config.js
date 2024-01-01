@@ -36,6 +36,7 @@ module.exports = {
           path: `${__dirname}/content`,
         },
     },
-    'gatsby-transformer-json'
+    'gatsby-transformer-json',
+    'gatsby-plugin-netlify'
   ],
 }

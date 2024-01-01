@@ -1,5 +1,5 @@
 import React from 'react';
-import { overlay, modal, modalClose } from './modal.module.css';
+import { overlay, modal, modalBody, modalClose } from './modal.module.css';
 
 export default function Modal({ children, show, setShow }) {
         return show ? (
@@ -10,9 +10,8 @@ export default function Modal({ children, show, setShow }) {
                     }
                 }}
             >
-                <div className={modal}>
-                    <h3>Modal Window</h3>
-                    <div>{children}</div>
+                <div className={modal} onClick={e => {e.stopPropagation()}}>
+                    <div className={modalBody}>{children}</div>
                     <button className={modalClose} onClick={() => setShow(false)}>X</button>
                 </div>
             </div>

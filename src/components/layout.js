@@ -2,12 +2,12 @@ import React, { Children, useState } from 'react';
 import Navbar from './navigation';
 import Footer from './footer';
 import Modal from './modal';
+import ContactMe from './contact-me';
 import {
   background,
   container,
   section
 } from './layout.module.css'
-import ContactMe from '../pages/letschat';
 
 const Layout = ({ wrapChildren, children }) => {
     const [show, setShow] = useState(false)
@@ -26,7 +26,7 @@ const Layout = ({ wrapChildren, children }) => {
         <div className={background}>
             <Navbar />
             <Modal show={show} setShow={setShow}>
-                {ContactMe()}
+                <ContactMe />
             </Modal>
             <main className={container}>
                 {wrappedChildren}
