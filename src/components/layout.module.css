@@ -15,14 +15,13 @@
 }
 
 .container {
-  margin: 0.5% 0.25%;
+  margin: 0.5em 0.25em;
   position: relative;
-  min-height: 800px;
+  flex: 1;
 }
 
 .section {
-  padding-top: 1.075%;
-  padding-bottom: 2.5%;
+  padding: 1em 0.5em;
   position: relative;
 }
 
@@ -53,13 +52,9 @@
 
 @media (width <= 700px) {
   .container {
-    min-height: 500px;
+    margin: 0.5em 0;
   }
-
-  .container > div {
-    padding: 5px 10px;
-  }
-
+  
   .section > div {
     display: inline-block;
     max-width: 100%;

@@ -49,5 +49,9 @@ Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
 
 # To Do
-1. Modals for skill achievments
-2. Clean up styling for mobile
+1. Fix inconsistent tabbing
+2. Fix size of skills section for mobile
+3. Modals for skill achievments
+4. State management for contact me success/failure
+5. Make contact modal accessible from page-level
+6. Smooth images in load

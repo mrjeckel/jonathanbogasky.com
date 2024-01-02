@@ -7,7 +7,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: 'jonathanbogasky.info',
+    title: 'jonathanbogasky.dev',
     menuLinks: [
       {
         name: 'Home',

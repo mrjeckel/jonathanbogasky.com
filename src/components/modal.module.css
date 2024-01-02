@@ -20,6 +20,7 @@
   inset: 0;
   border-radius: 6px;
   border: 2px solid #2f4858;
+  overflow-y: auto;
 }
 
 .modal-close {

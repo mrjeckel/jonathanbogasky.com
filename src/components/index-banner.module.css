@@ -1,12 +1,12 @@
 .banner-box {
     height: 500px;
-    margin: auto -0.25%;
+    margin: auto;
     max-width: 1920px;
     overflow: hidden;
     white-space: nowrap;
     width: 100.5%;
     position: absolute;
-    top: 10%;
+    inset: 10% 0 15%;
 }
 
 .image-box {
@@ -55,5 +55,11 @@
 @media (width <= 700px) {
     .left-tile {
         width: 350px;
+    }
+}
+
+@media (width > 700px) {
+    .banner-box {
+        margin: auto -0.25em;
     }
 }

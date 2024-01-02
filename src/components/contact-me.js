@@ -1,56 +1,53 @@
-import React, { useState } from 'react';
-import { submit } from './contact-me.module.css';
+import React, { useRef, useState } from 'react';
+import { contactForm } from './contact-me.module.css';
+import emailjs from '@emailjs/browser';
 
-export default function ContactMe() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+export default function ContactMe({ modalClose }) {
+  const form = useRef();
+  const [isSubmitDisabled, setSubmitDisabled] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, form.current, process.env.EMAILJS_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          modalClose();
+      }, (error) => {
+          console.log(error.text);
+          setSubmitDisabled(false);
+      });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
-  };
+    setSubmitDisabled(true);
+    sendEmail(e);
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit} className={contactForm}>
+      <h3>Let's Chat!</h3>
       <label>
         Name:
         <input
           type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
+          name="user_name"
         />
       </label>
-      <br />
       <label>
         Email:
         <input
           type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
+          name="user_email"
         />
       </label>
-      <br />
       <label>
         Message:
         <textarea
           name="message"
-          value={formData.message}
-          onChange={handleChange}
         />
       </label>
-      <br />
-      <button type="submit" className={submit}>Submit</button>
+      <button type="submit" disabled={isSubmitDisabled}>Submit</button>
     </form>
   );
 }

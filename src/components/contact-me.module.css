@@ -1,31 +1,35 @@
-form {
-  max-width: 400px;
+.contact-form {
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-label {
+.contact-form h3 {
+  margin-top: 0;
+}
+
+.contact-form label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 1em;
 }
 
-input,
-textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #2f4858;
   border-radius: 4px;
   box-sizing: border-box;
   resize: none;
   background-color: white;
 }
 
-textarea {
+.contact-form textarea {
   min-height: 15em;
 }
 
-.submit {
+.contact-form button {
   background-color: #2f4858;
   color: #f9f2db;
   padding: 10px 15px;
@@ -34,7 +38,7 @@ textarea {
   cursor: pointer;
 }
 
-.submit:hover {
+.contact-form button:hover {
   background-color: #52d2fe;
 }
 

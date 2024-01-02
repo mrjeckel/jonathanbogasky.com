@@ -12,6 +12,7 @@ import {
 const Layout = ({ wrapChildren, children }) => {
     const [show, setShow] = useState(false)
     const modalOpen = () => setShow(true)
+    const modalClose = () => setShow(false)
 
     if (wrapChildren) {
         var wrappedChildren = Children.map(children, child => {
@@ -26,7 +27,7 @@ const Layout = ({ wrapChildren, children }) => {
         <div className={background}>
             <Navbar />
             <Modal show={show} setShow={setShow}>
-                <ContactMe />
+                <ContactMe modalClose={modalClose}/>
             </Modal>
             <main className={container}>
                 {wrappedChildren}

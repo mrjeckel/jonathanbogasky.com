@@ -3,6 +3,7 @@
     place-content: center;
     gap: 5px;
     grid-auto-flow: column dense;
+    overflow-x: hidden;
 }
 
 .cloud-box > div {

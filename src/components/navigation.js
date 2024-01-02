@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { navLink, activeNavLink, navigation, navBox, linkIcon, logo } from './navigation.module.css';
+import { navLink, activeNavLink, navigation, navBox, linkIcon, logo, menuIcon } from './navigation.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare, faBars } from '@fortawesome/free-solid-svg-icons';
 
 function NavLink({ to, children }) {
 	return (
@@ -33,12 +33,16 @@ export default function Navbar() {
 				}
 			}
 		}
-	`)
+	`);
+	const [showMenu, setShowMenu] = useState(false);
 
 	return ( 
 		<nav className={navigation}>
-			<div className={logo}>{data.site.siteMetadata.title}</div>
-			<div className={navBox}>
+			<div className={logo}>
+				{data.site.siteMetadata.title}
+				<FontAwesomeIcon icon={faBars} className={menuIcon} onClick={() => setShowMenu(!showMenu)}/>
+			</div>
+			{(showMenu || window.innerWidth > 700) ? <div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
@@ -49,7 +53,7 @@ export default function Navbar() {
 						}
 					})
 				}
-			</div>
+			</div> : null}
 		</nav>
 	)
 }
