@@ -35,6 +35,7 @@ export default function Navbar() {
 		}
 	`);
 	const [showMenu, setShowMenu] = useState(false);
+	const isBrowser = () => typeof window !== "undefined"
 
 	return ( 
 		<nav className={navigation}>
@@ -42,7 +43,7 @@ export default function Navbar() {
 				{data.site.siteMetadata.title}
 				<FontAwesomeIcon icon={faBars} className={menuIcon} onClick={() => setShowMenu(!showMenu)}/>
 			</div>
-			{(showMenu || window.innerWidth > 700) ? <div className={navBox}>
+			{(showMenu || isBrowser && window.innerWidth > 700) ? <div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
