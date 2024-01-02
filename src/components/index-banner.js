@@ -8,6 +8,7 @@ export default function IndexBanner() {
     <div className={bannerBox}>
         <div className={imageBox}>
             <img src={chicago} className={bannerImg} />
+            <span>Image by Grzegorz Zdanowski</span>
         </div>
         <div className={leftTile} />
         <div className={rightTile} />

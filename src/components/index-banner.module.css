@@ -19,6 +19,15 @@
     z-index: 1;
 }
 
+.image-box > span {
+    background-color: transparent;
+    bottom: 0;
+    color: #f9f2db;
+    font-size: 10px;
+    left: 0;
+    position: absolute;
+}
+
 .banner-img {
     height: 500px;
     width: 1920px;
