@@ -42,7 +42,7 @@
   background-color: #52d2fe;
 }
 
-@media (width <= 700px) {
+@media (width <= 768px) {
   form {
     width: 100%;
   }

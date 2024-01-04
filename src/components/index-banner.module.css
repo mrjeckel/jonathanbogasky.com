@@ -60,13 +60,13 @@
     z-index: 2;
 }
 
-@media (width <= 700px) {
+@media (width <= 768px) {
     .left-tile {
         width: 350px;
     }
 }
 
-@media (width > 700px) {
+@media (width > 768px) {
     .banner-box {
         margin: auto -0.25em;
     }

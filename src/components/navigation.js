@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { navLink, activeNavLink, navigation, navBox, linkIcon, logo, menuIcon } from './navigation.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -34,9 +34,27 @@ export default function Navbar() {
 			}
 		}
 	`);
-	const isMobile = (typeof window !== "undefined" && window.innerWidth <= 700) ? true : false;
-	const [showMenu, setShowMenu] = useState(false);
 
+	const [screenSize, setScreenSize] = useState({
+		width: 0,
+		height: 0,
+	})
+
+	useEffect(() => {
+		const updateSize = () => {
+			setScreenSize({
+				width: window.innerWidth,
+				height: window.innerHeight,
+			});
+		};
+		window.addEventListener('resize', updateSize);
+		updateSize();
+		return () => window.removeEventListener('resize', updateSize);
+	}, [])
+
+	const isMobile = (typeof window !== "undefined" && screenSize.width <= 768) ? true : false;
+	const [showMenu, setShowMenu] = useState(false);
+		
 	return ( 
 		<nav className={navigation}>
 			<div className={logo}>

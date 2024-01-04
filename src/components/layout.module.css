@@ -49,7 +49,7 @@
   color: #52d2fe;
 }
 
-@media (width <= 700px) {
+@media (width <= 768px) {
   .container {
     margin: 0.5em 0;
   }
@@ -60,11 +60,11 @@
   }
 }
 
-@media (width > 700px) {
+@media (width > 768px) {
   .container {
     margin: 0.5em 0.25em;
   }
-  
+
   .container > :nth-child(2n-0) {
     padding-right: 12.5%;
     text-align: right;
