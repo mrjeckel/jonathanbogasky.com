@@ -15,7 +15,6 @@
 }
 
 .container {
-  margin: 0.5em 0.25em;
   position: relative;
   flex: 1;
 }
@@ -62,6 +61,10 @@
 }
 
 @media (width > 700px) {
+  .container {
+    margin: 0.5em 0.25em;
+  }
+  
   .container > :nth-child(2n-0) {
     padding-right: 12.5%;
     text-align: right;

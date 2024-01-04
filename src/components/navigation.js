@@ -34,8 +34,16 @@ export default function Navbar() {
 			}
 		}
 	`);
-	const [showMenu, setShowMenu] = useState(false);
 	const isBrowser = () => typeof window !== "undefined"
+	const [showMenu, setShowMenu] = useState(() => {
+		if (isBrowser() && window.innerWidth > 700) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	});
+	
 
 	return ( 
 		<nav className={navigation}>

@@ -1,15 +1,14 @@
 .navigation {
-  height: 7vh;
   width: 100%;
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
   display: flex;
   align-items: center;
   margin-bottom: 1%;
+  height: 7vh;
 }
 
 .logo {
-  float: left;
   color: #52d2fe;
   margin-left: 2.5%;
   font-size: 18px;
@@ -79,6 +78,10 @@
 }
 
 @media (width > 700px) {
+  .navigation {
+    justify-content: space-between;
+  }
+
   .menu-icon {
     display: none;
   }
