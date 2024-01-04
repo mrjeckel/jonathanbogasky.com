@@ -4,7 +4,7 @@
   font-family: Poppins, sans-serif;
   display: flex;
   align-items: center;
-  margin-bottom: 1%;
+  margin-bottom: 1em;
   height: 7vh;
 }
 
@@ -54,12 +54,12 @@
   text-decoration: underline;
 }
 
-@media (width <= 700px) {
+@media (width <= 768px) {
   .navigation {
     position: relative;
     flex-direction: column;
     z-index: 10;
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 
   .nav-box {
@@ -77,16 +77,12 @@
   }
 }
 
-@media (width > 700px) {
+@media (width > 768px) {
   .navigation {
     justify-content: space-between;
   }
 
   .menu-icon {
     display: none;
-  }
-
-  .nav-box {
-    height: 100%;
   }
 }
