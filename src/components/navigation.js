@@ -34,16 +34,8 @@ export default function Navbar() {
 			}
 		}
 	`);
-	const isBrowser = () => typeof window !== "undefined"
-	const [showMenu, setShowMenu] = useState(() => {
-		if (isBrowser() && window.innerWidth > 700) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	});
-	
+	const [showMenu, setShowMenu] = useState(false);
+	const renderNav = () => (typeof window !== "undefined" && window.innerWidth > 700) ? true : false;
 
 	return ( 
 		<nav className={navigation}>
@@ -51,7 +43,7 @@ export default function Navbar() {
 				{data.site.siteMetadata.title}
 				<FontAwesomeIcon icon={faBars} className={menuIcon} onClick={() => setShowMenu(!showMenu)}/>
 			</div>
-			{(showMenu || isBrowser() && window.innerWidth > 700) ? <div className={navBox}>
+			{(showMenu || renderNav()) ? <div className={navBox}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
