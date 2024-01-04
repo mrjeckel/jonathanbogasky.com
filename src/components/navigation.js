@@ -34,8 +34,8 @@ export default function Navbar() {
 			}
 		}
 	`);
+	const isMobile = (typeof window !== "undefined" && window.innerWidth <= 700) ? true : false;
 	const [showMenu, setShowMenu] = useState(false);
-	const renderNav = () => (typeof window !== "undefined" && window.innerWidth > 700) ? true : false;
 
 	return ( 
 		<nav className={navigation}>
@@ -43,7 +43,7 @@ export default function Navbar() {
 				{data.site.siteMetadata.title}
 				<FontAwesomeIcon icon={faBars} className={menuIcon} onClick={() => setShowMenu(!showMenu)}/>
 			</div>
-			{(showMenu || renderNav()) ? <div className={navBox}>
+			<div className={navBox} style={{ display: (!isMobile || showMenu) ? 'flex' : 'none' }}>
 				{
 					data.site.siteMetadata.menuLinks.map(link => {
 						if (link.external === true) {
@@ -54,7 +54,7 @@ export default function Navbar() {
 						}
 					})
 				}
-			</div> : null}
+			</div>
 		</nav>
 	)
 }
