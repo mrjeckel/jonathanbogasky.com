@@ -7,11 +7,9 @@
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
-  left: 0;
-  min-height: 100vh;
+  height: 100%;
   position: absolute;
-  right: 0;
-  top: 0;
+  inset: 0;
 }
 
 .container {
@@ -49,7 +47,7 @@
   color: #52d2fe;
 }
 
-@media (width <= 768px) {
+@media (width <= 700px) {
   .container {
     margin: 0.5em 0;
   }
@@ -60,11 +58,11 @@
   }
 }
 
-@media (width > 768px) {
+@media (width > 700px) {
   .container {
     margin: 0.5em 0.25em;
   }
-
+  
   .container > :nth-child(2n-0) {
     padding-right: 12.5%;
     text-align: right;

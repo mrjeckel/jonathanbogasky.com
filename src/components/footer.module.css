@@ -1,11 +1,12 @@
 .footer {
+    align-items: center;
+    background-color: #2f4858;
+    color: #f9f2db;
+    display: flex;
+    flex-shrink: 0;
+    height: 2.5em;
     margin-top: auto;
     padding: 0 5%;
-    height: 2.5em;
-    display: flex;
-    color: #f9f2db;
-    background-color: #2f4858;
-    align-items: center;
 }
 
 .footer span,
