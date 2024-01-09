@@ -1,11 +1,12 @@
 .navigation {
-  width: 100%;
-  text-transform: uppercase;
-  font-family: Poppins, sans-serif;
-  display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  display: flex;
+  flex-shrink: 0;
+  font-family: Poppins, sans-serif;
   height: 7vh;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .logo {
@@ -23,8 +24,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-right: 5%;
-  margin-left: auto;
 }
 
 .nav-link {
@@ -63,12 +62,13 @@
   }
 
   .nav-box {
-    position: relative;
+    position: fixed;
+    margin: 4vh 1vh;
     flex-direction: column;
-    z-index: 10;
-    margin: 0;
     border: 1px solid;
-    width: 100%;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 3px;
   }
 
   .nav-link {

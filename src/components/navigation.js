@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { navLink, activeNavLink, navigation, navBox, linkIcon, logo, menuIcon } from './navigation.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,13 +40,13 @@ export default function Navbar() {
 		height: 0,
 	})
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const updateSize = () => {
 			setScreenSize({
 				width: window.innerWidth,
 				height: window.innerHeight,
 			});
-		};
+		}
 		window.addEventListener('resize', updateSize);
 		updateSize();
 		return () => window.removeEventListener('resize', updateSize);
