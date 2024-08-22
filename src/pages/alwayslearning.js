@@ -15,12 +15,14 @@ export default function AboutPage() {
           tag
           content {
             name
-            title
-            degree
-            url
             rank
-            date
             url
+            degree
+            date
+            positions {
+              title
+              date
+            }
           }
         }
       }

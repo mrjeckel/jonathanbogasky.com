@@ -4,27 +4,47 @@
     "content": [
         {
             "name": "SRAM LLC",
-            "title": "Software Engineer",
-            "date": "July 2021 - Present",
-            "url": "https://www.sram.com/en/sram"
+            "url": "https://www.sram.com/en/sram",
+            "positions": [
+                {
+                    "title": "Senior Software Engineer",
+                    "date": "July 2023 - Present" 
+                },
+                {
+                    "title": "Software Engineer",
+                    "date": "July 2021 - Present"
+                }
+            ]
         },
         {
             "name": "ITW Dynatec",
-            "title": "Embedded Software Engineer",
-            "date": "June 2018 - July 2021",
-            "url": "https://www.itwdynatec.com/"
+            "url": "https://www.itwdynatec.com/",
+            "positions": [
+                {
+                    "title": "Embedded Software Engineer",
+                    "date": "June 2018 - July 2021"
+                }
+            ]
         },
         {
             "name": "Shiroki North America",
-            "title": "Manufacturing Controls Engineer",
-            "date": "May 2017 - June 2018",
-            "url": "https://www.shiroki.co.jp/english/"
+            "url": "https://www.shiroki.co.jp/english/",
+            "positions": [
+                {
+                    "title": "Manufacturing Controls Engineer",
+                    "date": "May 2017 - June 2018"
+                }
+            ]
         },
         {
             "name": "Hennessy Industries",
-            "title": "Engineer Intern",
-            "date": "December 2014 - May 2017",
-            "url": "https://coatscompany.com/"
+            "url": "https://coatscompany.com/",
+            "positions": [
+                {
+                    "title": "Engineer Intern",
+                    "date": "December 2014 - May 2017"
+                }
+            ]
         }
     ]
 }
